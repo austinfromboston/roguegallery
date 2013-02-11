@@ -296,6 +296,7 @@ DEPENDENCIES
   libv8 (~> 3.11.8)
   mailcatcher
   morecane
+  nokogiri
   pg
   quiet_assets
   rails (~> 3.2.11)
