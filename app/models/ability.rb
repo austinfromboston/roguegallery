@@ -12,6 +12,7 @@ class Ability
 
     # No one can destroy themselves.
     cannot :destroy, User, id: user.id
+    can :read, Target
 
 
     # Define abilities for the passed in user here. For example:

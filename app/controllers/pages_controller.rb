@@ -1,11 +1,11 @@
 class PagesController < ApplicationController
   TARGET_PAGE="http://nicklally.com"
-  TARGET_PAGE="http://nytimes.com"
-  TARGET_PAGE="http://danm.ucsc.edu"
 
   skip_authorization_check
 
   def root
+    @target = Target.order("RANDOM()").first
+    render "thief", layout: false
   end
 
   def thief

@@ -12,9 +12,11 @@ html
         header.navbar.navbar-fixed-top
           nav.navbar-inner
             .container
-              .brand Roguegallery
+              .brand StoleThis
               ul.nav.pull-right
                 - if current_user
+                  li
+                    = link_to "Targets", targets_path
                   li.dropdown
                     a.dropdown-toggle href='#' data-toggle='dropdown'
                       = current_user.email

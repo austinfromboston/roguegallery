@@ -1,7 +1,12 @@
 Roguegallery::Application.routes.draw do
 
+
   root to: 'pages#root'
   get "thief" => 'pages#thief'
+  get "t/:id" => "targets#show", as: "target"
+
+  resources :targets, only: [:new, :create, :index]
+
 
   match 'sign_in'  => 'user_sessions#new',     as: :sign_in
   match 'sign_out' => 'user_sessions#destroy', as: :sign_out

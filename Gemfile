@@ -15,6 +15,7 @@ gem 'valid_email'
 gem 'pg'
 gem 'awesome_print'
 gem 'nokogiri'
+gem 'friendly_id'
 
 group :assets do
   gem 'less-rails'
