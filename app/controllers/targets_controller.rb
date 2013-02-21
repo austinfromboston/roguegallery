@@ -20,4 +20,10 @@ class TargetsController < ApplicationController
   def show
     render 'show', layout: nil
   end
+
+  def destroy
+    @target.destroy
+    flash[:notice] = "#{@target.url} removed"
+    redirect_to targets_path
+  end
 end

@@ -1,10 +1,16 @@
 h1 Targets
 
 = link_to "Add a target", new_target_path
+.row
 
-ul
-  - @targets.each do |target|
-    li
-      = link_to target.url, target
-      br
-      = target_url(target)
+  ul
+    - @targets.each do |target|
+      li.clearfix
+        .span4
+          = link_to target.url, target
+          br
+          = target_url(target)
+        .span1
+          = link_to "x", target_path(target.id), method: :delete, class: "label label-important"
+
+

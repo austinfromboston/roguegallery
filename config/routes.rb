@@ -3,9 +3,10 @@ Roguegallery::Application.routes.draw do
 
   root to: 'pages#root'
   get "thief" => 'pages#thief'
-  get "t/:id" => "targets#show", as: "target"
 
-  resources :targets, only: [:new, :create, :index]
+  resources :targets, only: [:new, :create, :index, :destroy]
+  get "t/:id" => "targets#show", as: "target"
+  delete "t/:id" => "targets#destroy", as: "target"
 
 
   match 'sign_in'  => 'user_sessions#new',     as: :sign_in
