@@ -24,7 +24,7 @@ protected
     end
     doc = Nokogiri.parse src
     doc.css("img").each do |node|
-      node['src'] = "http://www.nicklally.com/wp-content/uploads/2011/10/aj7.jpg"
+      node['src'] = image_path "aj7.jpg"
     end
     doc.to_html
   end
